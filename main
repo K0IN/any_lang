@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+from math import log
+
+def resultOf(a, b):
+    return { 
+        'a': a, 
+        'b': b - 1 - a, 
+        'c': log(a) + log(b)
+    }
+
+def calculate(x):
+    a = 1
+    b = 1337
+    return resultOf(a * x, b + 1)
+
+def main(x):
+   res = calculate(x)
+   print(res)
+
+main(1)
